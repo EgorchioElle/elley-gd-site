@@ -1,0 +1,30 @@
+.nav{
+    @apply font-semibold absolute top-0 left-0 w-screen h-20  tracking-wider flex items-center justify-between
+    text-center;
+}
+
+.nav-transparent{
+    @apply bg-transparent text-white;
+}
+
+.nav-default{
+    @apply bg-white text-black;
+}
+
+.nav-logo{
+    @apply text-xl w-1/2;
+}
+
+.nav-menu{
+    @apply flex justify-center w-1/2 gap-8;
+}
+
+.nav-menu__item_transparent{
+    @apply border-b-2 border-b-transparent transition-all
+    hover:border-b-white;
+}
+
+.nav-menu__item_default{
+    @apply border-b-2 border-b-transparent transition-all
+    hover:border-b-black;
+}
