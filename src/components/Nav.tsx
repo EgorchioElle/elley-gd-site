@@ -1,33 +1,37 @@
 import React, { FC } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
+
+import { appRoutes } from '@/routes';
 
 import styles from '../styles/Nav.module.scss';
 
-export enum NavTypes {
-  transparent = 'transparent',
-  deafult = 'default'
-}
 
-interface NavProps {
-  type?: NavTypes
-}
 
-const Nav: FC<NavProps> = ({type = NavTypes.deafult}) => {
+
+
+const Nav: FC = () => {
+  const { pathname } = useRouter();
+
   return (
     <>
-        <nav className={styles.nav + ' ' + styles[`nav-${type}`]}>
-          <h1 className={styles['nav-logo']}>
-            <Link href="/">Elley</Link>
-          </h1>
-          <ul className={styles['nav-menu']}>
-            <li className={styles[`nav-menu__item_${type}`]}>
-              <Link href="/about">About</Link>
-            </li>
-            <li className={styles[`nav-menu__item_${type}`]}>
-              <Link href="/community">Community</Link>
-            </li>
-          </ul>
-        </nav>
+      <nav className={styles.nav}>
+        <section className={styles.image}>
+          <div className={styles.indicator}></div>
+        </section>
+        <ul className={styles.list}>
+          {appRoutes.map((item) => {
+            return (
+              <li key={item.id} className={pathname === item.path ? styles['list-item-selected'] : styles['list-item']}>
+                <Link href={item.path}>{item.title}</Link>
+              </li>
+            );
+          })}
+        </ul>
+        <footer className={styles.footer}>
+          ©Elley 2023
+        </footer>
+      </nav>
     </>
   );
 };

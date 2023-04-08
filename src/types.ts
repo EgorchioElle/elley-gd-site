@@ -3,3 +3,9 @@ export type socialType = {
     title: string;
     path: string;
 };
+
+export type routeType = {
+    id: number;
+    title: string;
+    path: string;
+};

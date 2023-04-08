@@ -1,15 +1,1 @@
-.main{
-    @apply w-screen min-h-screen overflow-hidden;
-}
 
-.content{
-    @apply w-screen h-screen flex justify-center items-center px-10 animate-slidein;
-}
-
-.image{
-    @apply w-96;
-}
-
-.alert{
-    @apply text-zinc-600 tracking-wider w-1/2; 
-}

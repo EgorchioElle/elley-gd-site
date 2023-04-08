@@ -1,30 +1,33 @@
 .nav{
-    @apply font-semibold absolute top-0 left-0 w-screen h-20  tracking-wider flex items-center justify-between
-    text-center;
+    @apply z-20 scale-50 relative w-345 h-690 bg-cover flex justify-start items-center flex-col
+    md:scale-100;
+    background-image: url('../images/iPhone.png');
 }
 
-.nav-transparent{
-    @apply bg-transparent text-white;
+.image{
+    @apply relative w-150 h-150 rounded-full mt-32 mb-8 bg-cover;
+    background-image: url('../images/elley-icon.png');
 }
 
-.nav-default{
-    @apply bg-white text-black;
+.indicator{
+    @apply p-3 absolute bg-green-400 border-4 border-background
+    bottom-2 right-2 rounded-full;
 }
 
-.nav-logo{
-    @apply text-xl w-1/2;
+.list{
+    @apply text-center;
 }
 
-.nav-menu{
-    @apply flex justify-center w-1/2 gap-8;
+.list-item{
+    @apply text-grayE text-xl uppercase tracking-wider my-3 border-b-2 border-b-transparent transition-all
+    hover:border-b-grayE;
 }
 
-.nav-menu__item_transparent{
-    @apply border-b-2 border-b-transparent transition-all
-    hover:border-b-white;
+.list-item-selected{
+    @apply text-xl text-blue-300 uppercase tracking-wider my-3 scale-110 transition-all;
 }
 
-.nav-menu__item_default{
-    @apply border-b-2 border-b-transparent transition-all
-    hover:border-b-black;
+.footer{
+    @apply text-zinc-500 uppercase tracking-wider text-sm
+    absolute bottom-8;
 }

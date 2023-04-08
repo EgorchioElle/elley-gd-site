@@ -1,22 +1,23 @@
 import Head from 'next/head';
 import { Inter } from 'next/font/google';
 import { FC } from 'react';
+import Link from 'next/link';
 
-import styles from '../styles/About.module.scss';
+import styles from '../styles/Socials.module.scss';
 
 import Nav from '@/components/Nav';
+import { socials } from '@/socials';
 
 const inter = Inter({ subsets: ['latin'] });
 
-const Home: FC = () => {
-
+const Socials: FC = () => {
   return (
     <>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="keywords" content="elley, geometry dash, gd, gameplay, russian, gp maker, discord, telegram, youtube" />
         <meta property="description" content="💸💸💸Cool gameplay for your level in geometry dash for a reasonable price! 
-        This page contains information about Elley!🏷️🏷️🏷️" />
+        This page contains the social networks of Elley, have a nice chat!💬💬💬" />
         <meta name="Author" content="Савельев Егор Антонович" />
         <meta name="Copyright" content="Elley 2023" />
         <title>Elley | Geometry Dash GP Making 🔨</title>
@@ -25,25 +26,29 @@ const Home: FC = () => {
         <meta property="og:locale" content="eng_Eng" />
         <meta property="og:title" content="Elley | Geometry Dash GP Making 🔨" />
         <meta property="og:description" content="💸💸💸Cool gameplay for your level in geometry dash for a reasonable price! 
-        This page contains information about Elley!🏷️🏷️🏷️" />
+        This page contains the social networks of Elley, have a nice chat!💬💬💬" />
         <meta property="og:site_name" content="Elley | Geometry Dash GP Making 🔨" />
       </Head>
 
       <main className={inter.className + ' ' + styles.main}>
         <Nav />
         <section className={styles.tab}>
-          <h1 className={styles.title}>About</h1>
+          <h1 className={styles.title}>Socials</h1>
           <p className={styles.description}>
-            I&rsquo;m glad to see you! I&rsquo;m Egor Savelyev, 15 year old Russian athlete, programmer and geometry dash player
+            And of course I&rsquo;m on social media!
           </p>
           <p className={styles.description}>
-            I always see things through to the end if I really like it, and I do it quickly
+            You can watch more of my gameplays on my youtube channel or contact me on discord or telegram about the part
           </p>
-          <p className={styles.description}>
-            Specifically on this site you can see my activities in GD
-          </p>
+          <section className={styles.socials}>
+            {socials.map((social) => {
+              return (
+                <Link href={social.path} title={social.title} key={social.id} className={styles.social + ' ' + styles[social.title]}></Link>
+              );
+            })}
+          </section>
           <footer className={styles.prompt}>
-            Click on the link &quot;works&quot; to see my best works in geometry dash!
+            That&rsquo;s all for now, there will be something bigger soon!
           </footer>
         </section>
       </main>
@@ -51,4 +56,4 @@ const Home: FC = () => {
   );
 };
 
-export default Home;
+export default Socials;

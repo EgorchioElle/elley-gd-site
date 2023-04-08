@@ -1,0 +1,49 @@
+.main{
+    @apply w-screen min-h-screen overflow-hidden bg-background flex items-center justify-center gap-x-36;
+}
+
+.tab{
+    @apply animate-spawn h-690 w-700 bg-tab scale-50 border border-tabBorder md:scale-100
+    rounded-1/11;
+}
+
+.title{
+    @apply text-title text-4xl tracking-widest uppercase my-16 ml-16;
+}
+
+.description{
+    @apply text-xl tracking-widest text-grayE capitalize w-400 ml-16 my-5;
+}
+
+.prompt{
+    @apply tracking-widest text-zinc-500 capitalize w-400 ml-16 absolute bottom-10;
+}
+
+.socials {
+    @apply w-full h-24 flex items-center justify-start gap-4 ml-16;
+}
+
+.social{
+    @apply w-12 h-12 bg-cover transition-all
+    hover:brightness-125 hover:scale-110;
+}
+
+.Youtube{
+    background-image: url('../images/svg/youtube.svg');
+}
+
+.GitHub{
+    background-image: url('../images/svg/github.svg');
+}
+
+.Google{
+    background-image: url('../images/svg/google.svg');
+}
+
+.Telegram{
+    background-image: url('../images/svg/telegram.svg');
+}
+
+.Discord{
+    background-image: url('../images/svg/discord.svg');
+}
