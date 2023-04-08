@@ -3,10 +3,11 @@ import { Inter } from 'next/font/google';
 import { FC } from 'react';
 import Link from 'next/link';
 
-import styles from '../styles/Socials.module.scss';
 
 import Nav from '@/components/Nav';
 import { socials } from '@/socials';
+
+import styles from '../styles/Socials.module.scss';
 
 const inter = Inter({ subsets: ['latin'] });
 

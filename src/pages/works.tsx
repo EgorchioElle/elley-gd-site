@@ -4,13 +4,14 @@ import { FC } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
+import Nav from '@/components/Nav';
+
 import styles from '../styles/Works.module.scss';
 import lav from '../images/lav.png';
 import wrath from '../images/wrath.png';
 import perfect10 from '../images/perfect10.png';
 import lich from '../images/lich.png';
 
-import Nav from '@/components/Nav';
 
 const inter = Inter({ subsets: ['latin'] });
 

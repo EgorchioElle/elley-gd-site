@@ -2,9 +2,10 @@ import Head from 'next/head';
 import { Inter } from 'next/font/google';
 import { FC } from 'react';
 
+import Nav from '@/components/Nav';
+
 import styles from '../styles/About.module.scss';
 
-import Nav from '@/components/Nav';
 
 const inter = Inter({ subsets: ['latin'] });
 
